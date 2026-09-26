@@ -1,0 +1,8 @@
+{
+  "name": "Jordan Example",
+  "email": "jordan@example.test",
+  "phone": "202-555-0142",
+  "ssn": "123-45-6789",
+  "payment_card": "4111 1111 1111 1111",
+  "api_key": "sk-test-0123456789abcdefghijklmnopqrstuv"
+}

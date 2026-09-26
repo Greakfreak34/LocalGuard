@@ -1,0 +1,131 @@
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/Contents 8 0 R /MediaBox [ 0 0 612 792 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+5 0 obj
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
+endobj
+6 0 obj
+<<
+/Author (LocalGuard synthetic test fixture) /CreationDate (D:20260926162615-04'00') /Creator (anonymous) /Keywords () /ModDate (D:20260926162615-04'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (Synthetic local PDF upload-scanning test) /Title (Sensitive PDF sample) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Length 1589
+>>
+stream
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+.090196 .196078 .301961 rg
+n 0 774 612 18 re f*
+.321569 .384314 .454902 rg
+BT /F1 9 Tf 10.8 TL ET
+BT 1 0 0 1 58 724 Tm (LOCALGUARD  /  PDF SCAN TEST) Tj T* ET
+.090196 .196078 .301961 rg
+BT /F2 26 Tf 31.2 TL ET
+BT 1 0 0 1 58 680 Tm (Sensitive PDF sample) Tj T* ET
+.85098 .466667 .341176 rg
+n
+70 639 m
+166 639 l
+172.6336 639 178 644.3664 178 651 c
+178 651 l
+178 657.6336 172.6336 663 166 663 c
+70 663 l
+63.3664 663 58 657.6336 58 651 c
+58 651 l
+58 644.3664 63.3664 639 70 639 c
+h
+f*
+1 1 1 rg
+BT /F2 10 Tf 12 TL ET
+BT 1 0 0 1 78 647 Tm (BLOCK SAMPLE) Tj T* ET
+.94902 .968627 .968627 rg
+n
+70 466 m
+542 466 l
+548.6336 466 554 471.3664 554 478 c
+554 586 l
+554 592.6336 548.6336 598 542 598 c
+70 598 l
+63.3664 598 58 592.6336 58 586 c
+58 478 l
+58 471.3664 63.3664 466 70 466 c
+h
+f*
+.090196 .196078 .301961 rg
+BT /F2 13 Tf 15.6 TL ET
+BT 1 0 0 1 80 566 Tm (Sample content) Tj T* ET
+q
+1 0 0 1 80 500 cm
+q
+BT 1 0 0 1 0 83 Tm 19 TL /F1 12 Tf .090196 .196078 .301961 rg (Synthetic data for LocalGuard testing only.) Tj  T*  T* (Fake SSN: ) Tj /F2 12 Tf (123-45-6789) Tj /F1 12 Tf  T*  T* (This number is fictional and included only to trigger the sensitive-data warning.) Tj T* ET
+Q
+Q
+.321569 .384314 .454902 rg
+BT /F1 9 Tf 10.8 TL ET
+BT 1 0 0 1 58 112 Tm (All information in this PDF is fictional test data.) Tj T* ET
+.843137 .886275 .898039 RG
+n 58 92 m 554 92 l S
+.321569 .384314 .454902 rg
+BT /F1 8 Tf 9.6 TL ET
+BT 1 0 0 1 58 74 Tm (Text is selectable so LocalGuard can inspect it locally.) Tj T* ET
+BT 1 0 0 1 466.872 74 Tm (SYNTHETIC TEST FILE) Tj T* ET
+ 
+endstream
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000514 00000 n 
+0000000582 00000 n 
+0000000908 00000 n 
+0000000967 00000 n 
+trailer
+<<
+/ID 
+[<32b522a41a66724955fd3d866f66f501><32b522a41a66724955fd3d866f66f501>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
+startxref
+2607
+%%EOF

@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "LocalGuard",
+  "version": "0.1.0",
+  "description": "Checks supported files and pasted text locally before a supported site receives them.",
+  "content_scripts": [
+    {
+      "matches": [
+        "file:///*",
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "vendor/pdfjs/pdf.min.mjs",
+        "vendor/pdfjs/pdf.worker.min.mjs",
+        "vendor/pdfjs/cmaps/*",
+        "vendor/pdfjs/standard_fonts/*",
+        "vendor/pdfjs/wasm/*",
+        "vendor/pdfjs/image_decoders/*",
+        "vendor/pdfjs/iccs/*"
+      ],
+      "matches": [
+        "file:///*",
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#102c2a" />
+    <title>LocalGuard upload test</title>
+    <style>
+      :root { color-scheme: dark; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      * { box-sizing: border-box; }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        padding: 48px 20px;
+        background: radial-gradient(circle at 85% 10%, #24514a 0, #132f2d 36%, #0b1718 100%);
+        color: #eef7f4;
+      }
+      main { width: min(720px, 100%); margin: 0 auto; }
+      .brand { display: flex; align-items: center; gap: 10px; color: #a6d9c9; font-size: 13px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+      .shield { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid #73c6ad; border-radius: 10px; color: #b9f0dc; font-size: 16px; }
+      h1 { margin: 42px 0 12px; font-size: clamp(32px, 6vw, 48px); letter-spacing: -.04em; }
+      .intro { max-width: 590px; margin: 0; color: #bdd0cb; font-size: 17px; line-height: 1.6; }
+      .card { margin-top: 30px; padding: 26px; border: 1px solid #33534f; border-radius: 18px; background: rgb(11 28 28 / 82%); box-shadow: 0 18px 48px rgb(0 0 0 / 22%); }
+      .label { display: block; margin-bottom: 12px; font-size: 14px; font-weight: 700; }
+      input[type="file"] { width: 100%; padding: 14px; border: 1px dashed #63857e; border-radius: 12px; background: #122827; color: #e7f4f0; }
+      input::file-selector-button { margin-right: 12px; padding: 9px 13px; border: 0; border-radius: 8px; background: #a9e4c8; color: #12332b; font: inherit; font-weight: 700; cursor: pointer; }
+      textarea { width: 100%; min-height: 116px; padding: 14px; border: 1px solid #63857e; border-radius: 12px; background: #122827; color: #e7f4f0; font: inherit; line-height: 1.5; resize: vertical; }
+      .status { margin: 18px 0 0; padding: 14px 16px; border-radius: 10px; background: #183a35; color: #c5f3dd; font-size: 14px; line-height: 1.5; }
+      .status[data-state="received"] { border: 1px solid #4d9e7d; }
+      .status[data-state="waiting"] { border: 1px solid #46645e; color: #d2dfdc; }
+      .hint { margin: 12px 2px 0; color: #a9bfba; font-size: 13px; line-height: 1.55; }
+      footer { margin-top: 24px; color: #89a59d; font-size: 12px; line-height: 1.5; }
+      @media (max-width: 560px) { body { padding: 30px 16px; } .card { padding: 19px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="brand"><span class="shield" aria-hidden="true">✓</span> LocalGuard · local upload check</div>
+      <h1>Try a safe AI upload</h1>
+      <p class="intro">Choose a sample file to see LocalGuard check it in your browser before this page receives it.</p>
+
+      <section class="card" aria-labelledby="picker-label">
+        <label class="label" id="picker-label" for="file-picker">Choose a synthetic sample</label>
+        <input
+          id="file-picker"
+          type="file"
+          accept=".txt,.csv,.json,.md,.pdf,text/plain,text/csv,application/json,text/markdown,application/pdf"
+        />
+        <p id="status" class="status" data-state="waiting" aria-live="polite">Waiting for a file.</p>
+        <p class="hint">A clean sample reaches this page. A sensitive sample should be blocked and leave this status unchanged.</p>
+      </section>
+
+      <section class="card" aria-labelledby="paste-label">
+        <label class="label" id="paste-label" for="paste-box">Paste a synthetic test value</label>
+        <textarea id="paste-box" placeholder="Copy a fake value from Notepad and paste it here."></textarea>
+        <p id="paste-status" class="status" data-state="waiting" aria-live="polite">Waiting for pasted text.</p>
+        <p class="hint">Try a fake SSN such as Fake SSN: 123-45-6789. Sensitive text should be stopped before this page receives it.</p>
+      </section>
+
+      <footer>Demo files and paste examples should contain synthetic text only. LocalGuard does not send content to its own server. This page is a local test surface, not an AI service.</footer>
+    </main>
+
+    <script>
+      document.querySelector("#file-picker").addEventListener("change", (event) => {
+        const names = Array.from(event.target.files || []).map((file) => file.name);
+        const status = document.querySelector("#status");
+        status.textContent = names.length ? "Page received: " + names.join(", ") : "Waiting for a file.";
+        status.dataset.state = names.length ? "received" : "waiting";
+      });
+
+      document.querySelector("#paste-box").addEventListener("input", () => {
+        const status = document.querySelector("#paste-status");
+        status.textContent = "This local page received text.";
+        status.dataset.state = "received";
+      });
+    </script>
+  </body>
+</html>
